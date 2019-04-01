@@ -1,0 +1,56 @@
+################
+### Markdown ###
+################
+[[plugins]]
+repo = 'plasticboy/vim-markdown'
+on_ft = ['markdown','mkd','md']
+
+# quote内のプログラムをシンタックスハイライトする
+[[plugins]]
+repo = 'joker1007/vim-markdown-quote-syntax'
+on_ft = ['markdown','mkd','md']
+
+# 編集中のMarkdownファイルのプレビューを作成する
+[[plugins]]
+repo = 'kannokanno/previm'
+on_ft = ['markdown','mkd','md']
+
+# プレビューをブラウザで開いてくれる
+[[plugins]]
+repo = 'tyru/open-browser.vim'
+on_ft = ['markdown','mkd','md']
+
+[[plugins]] # toml syntax
+repo = 'cespare/vim-toml'
+on_ft = 'toml'
+
+################
+### python   ###
+################
+# Vim内のPython環境とvirtualenvを連動させてくれるプラグイン
+# jedi-vimよりも後に追加すること
+[[plugins]]
+# repo = 'jmcantrell/vim-virtualenv'
+repo = 'miyakogi/vim-virtualenv'
+on_ft = ['python','py']
+
+[[plugins]]
+repo = 'ervandew/supertab'
+on_ft = ['python','py']
+hook_add = '''
+"let g:SuperTabContextDefaultCompletionType = "context"
+"let g:SuperTabDefaultCompletionType = "<c-n>"
+'''
+
+
+################
+### SQL      ###
+################
+[[plugins]]
+repo = 'vim-scripts/Align'
+on_ft = ['sql']
+
+[[plugins]]
+repo = 'vim-scripts/SQLUtilities'
+on_ft = ['sql']
+
