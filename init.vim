@@ -54,8 +54,8 @@ endif
 
 " Uninstall するときは、tomlからコメントアウトして以下を叩く。
 " 常時呼び出しだと重いので行わないこと
-call map(dein#check_clean(), "delete(v:val, 'rf')")
-call dein#recache_runtimepath()
+"call map(dein#check_clean(), "delete(v:val, 'rf')")
+"call dein#recache_runtimepath()
 
 filetype plugin indent on
 syntax enable

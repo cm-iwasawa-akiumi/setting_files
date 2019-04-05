@@ -30,3 +30,5 @@ nnoremap b> <C-w>>
 " ビジュアルモード選択した部分を*で検索
 vnoremap * h"zy:let @/ = @z<CR>n
 
+" 余計なプラグインをアンインストール
+nnoremap ui :call map(dein#check_clean(), "delete(v:val, 'rf')")<Enter>:call dein#recache_runtimepath()<Enter>
