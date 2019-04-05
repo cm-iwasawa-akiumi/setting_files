@@ -38,21 +38,35 @@ hook_add = '''
 let g:vimfiler_as_default_explorer = 1
 '''
 
+# 
 [[plugins]]
-repo = 'Shougo/deoplete.nvim'
+repo = 'thinca/vim-quickrun'
 hook_source = '''
-source ~/.config/nvim/plugins/deoplete.rc.vim
+source ~/.config/nvim/plugins/vim-quickrun.rc.vim
 '''
 
-[[plugins]]
-repo = 'junegunn/fzf'
-
-[[plugins]]
-repo = 'autozimu/LanguageClient-neovim'
-rev = 'next'
-depends = ['deoplete.nvim']
-build = 'bash install.sh'
-hook_source = '''
-source ~/.config/nvim/plugins/LanguageClient-neovim.rc.vim
-'''
-
+## Vim内のPython環境とvirtualenvを連動させてくれるプラグイン
+## jedi-vimよりも後に追加すること
+#[[plugins]]
+## repo = 'jmcantrell/vim-virtualenv'
+#repo = 'miyakogi/vim-virtualenv'
+##on_ft = ['python','py']
+#
+#[[plugins]]
+#repo = 'Shougo/deoplete.nvim'
+#hook_source = '''
+#source ~/.config/nvim/plugins/deoplete.rc.vim
+#'''
+#
+#[[plugins]]
+#repo = 'junegunn/fzf'
+#
+#[[plugins]]
+#repo = 'autozimu/LanguageClient-neovim'
+#rev = 'next'
+#depends = ['deoplete.nvim']
+#build = 'bash install.sh'
+#hook_source = '''
+#source ~/.config/nvim/plugins/LanguageClient-neovim.rc.vim
+#'''
+#

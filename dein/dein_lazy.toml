@@ -27,6 +27,31 @@ on_ft = 'toml'
 ################
 ### python   ###
 ################
+#[[plugins]]
+#repo = 'ervandew/supertab'
+#on_ft = ['python','py']
+#hook_add = '''
+#"let g:SuperTabContextDefaultCompletionType = "context"
+#"let g:SuperTabDefaultCompletionType = "<c-n>"
+#'''
+# 
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+on_ft = ['python','py']
+
+# 
+[[plugins]]
+repo = 'zchee/deoplete-jedi'
+on_ft = ['python','py']
+
+# IDEの様なオムニ補完を提供してくれるプラグイン
+[[plugins]]
+repo = 'davidhalter/jedi-vim'
+on_ft = ['python','py']
+hook_source = '''
+source ~/.config/nvim/plugins/jedi-vim.rc.vim
+'''
+
 # Vim内のPython環境とvirtualenvを連動させてくれるプラグイン
 # jedi-vimよりも後に追加すること
 [[plugins]]
@@ -34,14 +59,9 @@ on_ft = 'toml'
 repo = 'miyakogi/vim-virtualenv'
 on_ft = ['python','py']
 
-[[plugins]]
-repo = 'ervandew/supertab'
-on_ft = ['python','py']
-hook_add = '''
-"let g:SuperTabContextDefaultCompletionType = "context"
-"let g:SuperTabDefaultCompletionType = "<c-n>"
-'''
-
+#[[plugins]]
+#repo = 'majutsushi/tagbar'
+#on_ft = ['python','py']
 
 ################
 ### SQL      ###
