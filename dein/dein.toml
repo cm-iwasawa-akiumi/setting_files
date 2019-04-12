@@ -1,0 +1,90 @@
+
+# 背景色設定
+[[plugins]]
+repo = 'w0ng/vim-hybrid'
+[[plugins]]
+repo = 'nanotech/jellybeans.vim'
+[[plugins]]
+repo = 'tomasr/molokai'
+[[plugins]]
+repo = 'jonathanfilip/vim-lucius'
+[[plugins]]
+repo = 'gosukiwi/vim-atom-dark'
+
+# linter 
+[[plugins]]
+repo = 'w0rp/ale'
+hook_add = '''
+source ~/.config/nvim/plugins/ale.rc.vim
+'''
+
+# ステータスラインのテーマを変更
+[[plugins]]
+repo    = 'vim-airline/vim-airline'
+depends = ['vim-airline-themes']
+hook_add = '''
+source ~/.config/nvim/plugins/airline.rc.vim
+'''
+
+# ステータスラインのテーマを変更
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+hook_add = '''
+" ステータスラインのテーマを変更
+"let g:airline_theme = 'molokai'
+let g:airline_theme = 'badwolf'
+'''
+
+# インデントの可視化
+[[plugins]]
+repo = 'Yggdroot/indentLine'
+
+# 統合ユーザインターフェース
+[[plugins]]
+repo = 'Shougo/unite.vim'
+
+# filer(unite依存)
+[[plugins]]
+repo = 'Shougo/vimfiler.vim'
+depends = ['unit.vim']
+hook_add = '''
+let g:vimfiler_as_default_explorer = 1
+'''
+
+# 環境変数を参照するように(非同期実行機能は使っていない)
+[[plugins]]
+repo = 'Shougo/vimproc'
+build = 'make'
+
+# 実行ツール
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+hook_add = '''
+source ~/.config/nvim/plugins/vim-quickrun.rc.vim
+'''
+
+## Vim内のPython環境とvirtualenvを連動させてくれるプラグイン
+## jedi-vimよりも後に追加すること
+#[[plugins]]
+## repo = 'jmcantrell/vim-virtualenv'
+#repo = 'miyakogi/vim-virtualenv'
+##on_ft = ['python','py']
+#
+#[[plugins]]
+#repo = 'Shougo/deoplete.nvim'
+#hook_add = '''
+#source ~/.config/nvim/plugins/deoplete.rc.vim
+#'''
+#
+#[[plugins]]
+#repo = 'junegunn/fzf'
+#
+#[[plugins]]
+#repo = 'autozimu/LanguageClient-neovim'
+#rev = 'next'
+#depends = ['deoplete.nvim']
+#build = 'bash install.sh'
+#hook_add = '''
+#source ~/.config/nvim/plugins/LanguageClient-neovim.rc.vim
+#'''
+#
