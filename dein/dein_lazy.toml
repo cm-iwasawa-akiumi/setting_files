@@ -49,7 +49,12 @@ on_ft = ['python','py']
 repo = 'davidhalter/jedi-vim'
 on_ft = ['python','py']
 hook_source = '''
-source ~/.config/nvim/plugins/jedi-vim.rc.vim
+"source ~/.config/nvim/plugins/jedi-vim.rc.vim
+let g:jedi#popup_on_dot = 0 " ドット(.)を入力したとき自動で補完しない(Ctrl+Space)
+let g:jedi#popup_select_first = 0 " 補完候補の1番目を選択しない
+let g:jedi#show_call_signatures = 1 " 関数の引数表示
+autocmd FileType python setlocal omnifunc=jedi#completions   " 補完エンジンはjediを使う
+autocmd FileType python setlocal completeopt-=preview   "　ポップアップを表示しない
 '''
 
 # Vim内のPython環境とvirtualenvを連動させてくれるプラグイン

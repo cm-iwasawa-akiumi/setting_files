@@ -40,6 +40,9 @@ set hlsearch
 " 保存しなくてもbuffer移動可能
 set hidden
 
+"hi LineNr ctermbg=0 ctermfg=1
+"hi CursorLineNr ctermbg=4 ctermfg=0
+
 " 不可視文字を可視化(タブが「▸-」と表示される)
 set list listchars=tab:\▸\-
 

@@ -3,6 +3,9 @@ let g:ale_sign_warning = 'W➤'
 let g:ale_echo_msg_format = '[%linter%] %s'
 let g:ale_lint_on_text_changed = 'normal'
 
+" 左端のシンボルカラムを常時表示する
+let g:ale_sign_column_always = 1
+
 " flake8をLinterとして登録
 let g:ale_linters = {
     \ 'python': ['flake8'],

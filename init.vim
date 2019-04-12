@@ -11,6 +11,8 @@ if exists("$VIRTUAL_ENV")
   endif
 else
     let g:python3_host_prog = $HOME . '/.pyenv/versions/neovim3/bin/python'
+    " QuickRun実行時対応
+    let $PATH = $HOME . '/.pyenv/versions/neovim3/bin:' . $PATH
 endif
 
 " dein.vimインストール時に指定したディレクトリをセット
@@ -57,8 +59,19 @@ endif
 "call map(dein#check_clean(), "delete(v:val, 'rf')")
 "call dein#recache_runtimepath()
 
+
 filetype plugin indent on
 syntax enable
+
+" コメントの色を固定する(colorschemeより前に設定すること)
+autocmd ColorScheme * highlight Comment ctermfg=167 guifg=#008800
+
+set background=dark
+"colorscheme hybrid
+"colorscheme jellybeans
+"colorscheme molokai
+"colorscheme lucius
+colorscheme atom-dark-256
 
 runtime! options.rc.vim
 runtime! keymap.rc.vim
