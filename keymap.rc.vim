@@ -13,6 +13,8 @@ nnoremap bd :bdelete<Enter>
 nnoremap bs :split<Enter>
 " 垂直分割
 nnoremap bv :vsplit<Enter>
+" 他ウィンドウを閉じる
+nnoremap bo :only<Enter>
 " 隣のウィンドウへ
 nnoremap bw <C-w>w
 " 高さ大きく
@@ -28,8 +30,5 @@ nnoremap b> <C-w>>
 " ビジュアルモード選択した部分を*で検索
 vnoremap * h"zy:let @/ = @z<CR>n
 
-" pythonを実行
-" __file__を認識してくれないが仕方なし...
-nnoremap py :py3file %<Enter>
-" nnoremap py :! python  %<Enter>
-
+" 余計なプラグインをアンインストール
+nnoremap ui :call map(dein#check_clean(), "delete(v:val, 'rf')")<Enter>:call dein#recache_runtimepath()<Enter>
