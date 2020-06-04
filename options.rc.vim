@@ -52,3 +52,12 @@ set whichwrap=b,s,h,l,<,>,[,],~
 " カーソルラインをハイライト"
 set cursorline
 
+" clipboardと連動
+set clipboard+=unnamed
+
+" 折り返ししない
+set nowrap
+
+" vimgrep実行時にquickfix-windowを自動的に表示する
+autocmd QuickFixCmdPost *grep* cwindow
+
