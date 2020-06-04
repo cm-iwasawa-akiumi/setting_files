@@ -20,7 +20,8 @@ on_ft = ['markdown','mkd','md']
 repo = 'tyru/open-browser.vim'
 on_ft = ['markdown','mkd','md']
 
-[[plugins]] # toml syntax
+# toml syntax
+[[plugins]]
 repo = 'cespare/vim-toml'
 on_ft = 'toml'
 
@@ -28,49 +29,62 @@ on_ft = 'toml'
 ### python   ###
 ################
 #[[plugins]]
-#repo = 'ervandew/supertab'
-#on_ft = ['python','py']
-#hook_add = '''
-#"let g:SuperTabContextDefaultCompletionType = "context"
-#"let g:SuperTabDefaultCompletionType = "<c-n>"
+#repo = 'Shougo/deoplete.nvim'
+#on_ft = ['python']
+#hook_source = '''
+#source ~/.config/nvim/plugins/deoplete.rc.vim
 #'''
-# 
-[[plugins]]
-repo = 'Shougo/deoplete.nvim'
-on_ft = ['python','py']
-
-# 
-[[plugins]]
-repo = 'zchee/deoplete-jedi'
-on_ft = ['python','py']
-
-# IDEの様なオムニ補完を提供してくれるプラグイン
-[[plugins]]
-repo = 'davidhalter/jedi-vim'
-on_ft = ['python','py']
-hook_source = '''
-source ~/.config/nvim/plugins/jedi-vim.rc.vim
-'''
 
 # Vim内のPython環境とvirtualenvを連動させてくれるプラグイン
 # jedi-vimよりも後に追加すること
 [[plugins]]
-# repo = 'jmcantrell/vim-virtualenv'
 repo = 'miyakogi/vim-virtualenv'
-on_ft = ['python','py']
+on_ft = ['python']
+
+[[plugins]]
+repo = 'prabirshrestha/asyncomplete.vim'
+on_ft = ['python']
+
+[[plugins]]
+repo = 'prabirshrestha/async.vim'
+on_ft = ['python']
+
+[[plugins]]
+repo = 'prabirshrestha/vim-lsp'
+on_ft = ['python']
+depends = ['async.vim', 'vim-virtualenv']
+hook_source = '''
+source ~/.config/nvim/plugins/vim-lsp.rc.vim
+'''
+
+[[plugins]]
+repo = 'ryanolsonx/vim-lsp-python'
+on_ft = ['python']
+depends = ['vim-lsp']
+
+[[plugins]]
+repo = 'prabirshrestha/asyncomplete-lsp.vim'
+on_ft = ['python']
 
 #[[plugins]]
-#repo = 'majutsushi/tagbar'
-#on_ft = ['python','py']
+#repo = 'lighttiger2505/deoplete-vim-lsp'
+#on_ft = ['python']
+#depends = ['deoplete.nvim', 'vim-lsp']
+#hook_source = '''
+#source ~/.config/nvim/plugins/deoplete-vim-lsp.rc.vim
+#'''
 
 ################
 ### SQL      ###
 ################
 [[plugins]]
 repo = 'vim-scripts/Align'
-on_ft = ['sql']
+on_ft = ['sql','sql']
 
 [[plugins]]
 repo = 'vim-scripts/SQLUtilities'
-on_ft = ['sql']
+on_ft = ['sql','sql']
 
+[[plugins]]
+repo = 'mattn/vim-sqlfmt'
+on_ft = ['sql']

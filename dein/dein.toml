@@ -63,28 +63,15 @@ hook_add = '''
 source ~/.config/nvim/plugins/vim-quickrun.rc.vim
 '''
 
-## Vim内のPython環境とvirtualenvを連動させてくれるプラグイン
-## jedi-vimよりも後に追加すること
-#[[plugins]]
-## repo = 'jmcantrell/vim-virtualenv'
-#repo = 'miyakogi/vim-virtualenv'
-##on_ft = ['python','py']
-#
-#[[plugins]]
-#repo = 'Shougo/deoplete.nvim'
-#hook_add = '''
-#source ~/.config/nvim/plugins/deoplete.rc.vim
-#'''
-#
-#[[plugins]]
-#repo = 'junegunn/fzf'
-#
-#[[plugins]]
-#repo = 'autozimu/LanguageClient-neovim'
-#rev = 'next'
-#depends = ['deoplete.nvim']
-#build = 'bash install.sh'
-#hook_add = '''
-#source ~/.config/nvim/plugins/LanguageClient-neovim.rc.vim
-#'''
-#
+[[plugins]]
+repo = 't9md/vim-quickhl'
+hook_add = '''
+nmap <Space>m <Plug>(quickhl-manual-this)
+xmap <Space>m <Plug>(quickhl-manual-this)
+nmap <Space>M <Plug>(quickhl-manual-reset)
+xmap <Space>M <Plug>(quickhl-manual-reset)
+'''
+
+# $Unite colorscheme -auto-preview でプレビュー表示できる
+[[plugins]]
+repo = 'ujihisa/unite-colorscheme'
