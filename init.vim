@@ -7,12 +7,12 @@ if exists("$VIRTUAL_ENV")
   if !empty(glob("$VIRTUAL_ENV/bin/python3"))
     let g:python3_host_prog = $VIRTUAL_ENV . '/bin/python'
   else
-    let g:python_host_prog = substitute(system("which python"), '\n', '', 'g')
+    let g:python3_host_prog = substitute(system("which python"), '\n', '', 'g')
   endif
 else
-    let g:python3_host_prog = $HOME . '/.pyenv/versions/neovim3/bin/python'
+    let g:python3_host_prog = $HOME . '/.pyenv/versions/neovim375/bin/python'
     " QuickRun実行時対応
-    let $PATH = $HOME . '/.pyenv/versions/neovim3/bin:' . $PATH
+    let $PATH = $HOME . '/.pyenv/versions/neovim375/bin:' . $PATH
 endif
 
 " dein.vimインストール時に指定したディレクトリをセット
@@ -59,7 +59,6 @@ endif
 "call map(dein#check_clean(), "delete(v:val, 'rf')")
 "call dein#recache_runtimepath()
 
-
 filetype plugin indent on
 syntax enable
 
@@ -69,10 +68,10 @@ autocmd ColorScheme * highlight Comment ctermfg=167 guifg=#008800
 set background=dark
 "colorscheme hybrid
 "colorscheme jellybeans
-"colorscheme molokai
+colorscheme molokai
 "colorscheme lucius
-colorscheme atom-dark-256
+"colorscheme atom-dark-256
 
 runtime! options.rc.vim
 runtime! keymap.rc.vim
-
+runtime! wsl.rc.vim
