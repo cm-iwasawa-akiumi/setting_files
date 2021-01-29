@@ -6,6 +6,7 @@ endif
 if exists("$VIRTUAL_ENV")
   if !empty(glob("$VIRTUAL_ENV/bin/python3"))
     let g:python3_host_prog = $VIRTUAL_ENV . '/bin/python'
+    let $PATH = $HOME . $VIRTUAL_ENV . '/bin:' . $PATH
   else
     let g:python3_host_prog = substitute(system("which python"), '\n', '', 'g')
   endif
