@@ -22,7 +22,11 @@ let g:ale_python_flake8_executable = g:python3_host_prog
 let g:ale_python_flake8_options = '-m flake8'
 " autopep8 PEP8スタイルガイドに準拠するように
 let g:ale_python_autopep8_executable = g:python3_host_prog
-let g:ale_python_autopep8_options = '-m autopep8'
+if exists("$VIRTUAL_ENV")
+    " activate中にスタイル修正できなくなるので一旦コメントアウト
+else
+    let g:ale_python_autopep8_options = '-m autopep8'
+endif
 " importのsortをアルファベット順に
 let g:ale_python_isort_executable = g:python3_host_prog
 let g:ale_python_isort_options = '-m isort'

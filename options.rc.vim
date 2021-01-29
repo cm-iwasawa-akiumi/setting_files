@@ -52,3 +52,19 @@ set whichwrap=b,s,h,l,<,>,[,],~
 " カーソルラインをハイライト"
 set cursorline
 
+" clipboardと連動
+set clipboard+=unnamed
+
+" 折り返ししない
+set nowrap
+
+" ターミナルでもTrueColorを使用可能にする
+set termguicolors
+
+" floating windowを半透明に
+set winblend=50
+set pumblend=10
+
+" vimgrep実行時にquickfix-windowを自動的に表示する
+autocmd QuickFixCmdPost *grep* cwindow
+
